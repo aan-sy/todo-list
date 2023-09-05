@@ -1,17 +1,19 @@
 import React, { useState } from 'react';
 import { IoClose } from 'react-icons/io5';
 
-export default function Todo({ todo, onDelete }) {
+export default function Todo({ todo, onDelete, onUpdate }) {
   const [checked, setChecked] = useState(false);
   const [startTime, setStartTime] = useState('');
   const [endTime, setEndTime] = useState('');
-  const { id, text } = todo;
+  const { id, text, status } = todo;
 
-  const handleDelete = () => {onDelete(id)}
+  const handleDelete = () => {onDelete(todo)}
 
-  const handleChecked = () => {
+  const handleChecked = (e) => {
+    const status = e.target.checked ? 'completed' : 'todo';
+    onUpdate({...todo, status});
     setChecked(checked => !checked);
-    !checked && startTime !== '' && addEndTime();
+    e.target.checked && startTime !== '' && addEndTime();
   }
 
   const addStartTime = () => {
