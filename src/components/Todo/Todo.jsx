@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { IoClose } from 'react-icons/io5';
 
+// todo - 걸린 시간 나타내보기
 export default function Todo({ todo, onDelete, onUpdate }) {
   const { id, text, status, startTime, endTime } = todo;
 
