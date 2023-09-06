@@ -15,7 +15,9 @@ export default function Add({ onAdd }) {
     onAdd({
       id: uuidv4(),
       text: value,
-      status: 'todo'
+      status: 'todo',
+      startTime: '',
+      endTime: '',
     })
 
     setValue('');
