@@ -32,7 +32,7 @@ export default function Todo({ todo, onDelete, onUpdate }) {
       <div>
         {!!startTime || <button onClick={handleStartTime}>시작 시간 저장</button>}
         {!!startTime && <span>시작 시간 <strong>{`${startTime}`}</strong></span>}
-        {!!endTime && <span>완료 시간 <strong>{`${endTime}`}</strong></span>}
+        {(status === 'completed') && <span>완료 시간 <strong>{`${endTime}`}</strong></span>}
       </div>
     </li>
   );    
