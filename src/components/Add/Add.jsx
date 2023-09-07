@@ -18,6 +18,7 @@ export default function Add({ onAdd }) {
       status: 'todo',
       startTime: '',
       endTime: '',
+      elapsed: '',
     })
 
     setValue('');

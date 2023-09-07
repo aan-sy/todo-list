@@ -1,14 +1,14 @@
-import { useState } from 'react';
 import './App.css';
+import { useState } from 'react';
+import { DarkModeProvider } from './context/DarkModeContext';
 import Nav from './components/Nav/Nav';
 import TodoList from './components/TodoList/TodoList';
 import Header from './components/Header/Header';
-import { DarkModeProvider } from './context/DarkModeContext';
 
 const filters = ['all', 'todo', 'completed'];
 
 function App() {
-  const [filter, setFilter] = useState('all');
+  const [filter, setFilter] = useState(filters[0]);
   const handleFilter = filter => setFilter(filter);
 
   return (
