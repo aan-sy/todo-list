@@ -17,8 +17,8 @@
   cursor: pointer;
   -webkit-appearance: none;
   appearance: none;
-  width: .8rem;
-  height: .8rem;
+  width: var(--font-s);
+  height: var(--font-s);
   border: 1px solid var(--color-accent);
   border-radius: 3px;
   display: grid;
