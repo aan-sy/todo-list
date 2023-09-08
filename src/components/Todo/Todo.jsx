@@ -1,5 +1,5 @@
 import styles from './Todo.module.css'
-import React, { useState } from 'react';
+import React from 'react';
 import { IoClose } from 'react-icons/io5';
 
 export default function Todo({ todo, onDelete, onUpdate }) {

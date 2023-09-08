@@ -29,6 +29,9 @@ export default function Header() {
       break;
     case 6:
       currDay = '토';
+      break;
+    default:
+      console.log('요일을 불러올 수 없음');
   }
 
   const { darkMode, toggleDarkMode } = useDarkMode();
