@@ -1,3 +1,4 @@
+import styles from './Header.module.css'
 import React from 'react';
 import { BiSolidMoon, BiSolidSun } from 'react-icons/bi';
 import { useDarkMode } from '../../context/DarkModeContext';
@@ -33,9 +34,12 @@ export default function Header() {
   const { darkMode, toggleDarkMode } = useDarkMode();
 
   return (
-    <header>
-      <h2>{`${currYear}년 ${currMonth}월 ${currDate}일 ${currDay}요일`}</h2>
-      <button onClick={toggleDarkMode}>
+    <header className={styles.header}>
+      <div>
+        <h1 className={styles.title}>1 Day Planner</h1>
+        <h2 className={styles.date}>{`${currYear}년 ${currMonth}월 ${currDate}일 ${currDay}요일`}</h2>
+      </div>
+      <button className={styles.btnMode} onClick={toggleDarkMode}>
         {darkMode ? <BiSolidSun /> : <BiSolidMoon />}
       </button>
     </header>

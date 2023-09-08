@@ -1,0 +1,75 @@
+:root {
+  --color-main: #F2F575;
+  --color-accent: #242526;
+  --color-subAccent: #ABA79B;
+  --color-accent-contrast: #fefffe;
+  --color-white: #fefffe;
+  --gradient-main: linear-gradient(180deg, var(--color-white) 60%, var(--color-main) 80%);
+  --font-xs: .7rem;
+  --font-s: .8rem;
+  --font-m: 1rem;
+  --font-l: 1.1rem;
+}
+
+html.darkMode {
+  --color-main: #5B4E45;
+  --color-accent: #fefffe;
+  --color-subAccent: #A9A59A;
+  --color-accent-contrast: #252422;
+  --gradient-main: linear-gradient(180deg, var(--color-main) 10%, var(--color-accent-contrast) 99%);
+}
+
+/* COMMON */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+body {
+  accent-color: var(--color-accent);
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  outline: 0;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  color: var(--color-accent);
+}
+
+/* ROOT */
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-white);
+  width: 100vw;
+  height: 100vh;
+}
+
+.planner {
+  display: flex;
+  flex-direction: column;
+  background: var(--gradient-main);
+  color: var(--color-accent);
+  width: 20rem;
+  height: 45rem;
+  padding: 1rem;
+  border: 1px solid var(--color-accent);
+  border-radius: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .planner {
+    width: 100vw;
+    height: 100vh;
+    border: 0;
+    border-radius: 0;
+  }
+}

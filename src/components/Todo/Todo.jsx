@@ -1,3 +1,4 @@
+import styles from './Todo.module.css'
 import React, { useState } from 'react';
 import { IoClose } from 'react-icons/io5';
 
@@ -23,17 +24,17 @@ export default function Todo({ todo, onDelete, onUpdate }) {
   }
 
   return (
-    <li>
-      <div>
-        <input id={id} type="checkbox" checked={status === 'completed'} onChange={handleChecked} />
-        <label htmlFor={id}>{text}</label>
-        <button onClick={handleDelete}><IoClose /></button>
+    <li className={styles.todo}>
+      <div className={styles.content}>
+        <input className={styles.checkbox} id={id} type="checkbox" checked={status === 'completed'} onChange={handleChecked} />
+        <label className={styles.label} htmlFor={id}>{text}</label>
+        <button className={styles.btnDelete} onClick={handleDelete}><IoClose /></button>
       </div>
-      <div>
-        {!!startTime || <button onClick={handleStartTime}>시작 시간 저장</button>}
-        {!!startTime && <span>시작 시간 <strong>{`${startTime[0]}`}</strong></span>}
-        {(!!endTime && status === 'completed') && <span>완료 시간 <strong>{`${endTime[0]}`}</strong></span>}
-        {(!!elapsed && status === 'completed') && <span>걸린 시간 <strong>{`${elapsed}`}</strong></span>}
+      <div className={styles.time}>
+        {!!startTime || <button className={styles.btnStartTime} onClick={handleStartTime}>시작 시간 저장</button>}
+        {!!startTime && <span className={styles.timeText}>시작 <strong>{`${startTime[0]}`}</strong></span>}
+        {(!!endTime && status === 'completed') && <span className={styles.timeText}>완료 <strong>{`${endTime[0]}`}</strong></span>}
+        {(!!elapsed && status === 'completed') && <span className={styles.timeText}>총 <strong>{`${elapsed}`}</strong></span>}
       </div>
     </li>
   );    

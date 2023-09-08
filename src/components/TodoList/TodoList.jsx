@@ -1,3 +1,4 @@
+import styles from './TodoList.module.css'
 import React, { useEffect, useState } from 'react';
 import { GoTrash } from 'react-icons/go';
 import Add from '../Add/Add';
@@ -19,19 +20,31 @@ export default function TodoList({ filter }) {
   const completedTodos = filterTodos(todos, 'completed');
 
   return (
-    <section>
-      <div>
-        {(filter === 'all' || filter === 'todo') && <h3>Todo <span>{uncompletedTodos.length}</span></h3>}
-        <ul>
-          {(filter === 'all' || filter === 'todo') && uncompletedTodos.map((todo) => (<Todo key={todo.id} todo={todo} onDelete={deleteTodo} onUpdate={updateTodo} />))}
-        </ul>
-        {(filter === 'all' || filter === 'completed') && <h3>Completed <span>{completedTodos.length}</span></h3>}
-        <ul>
-        {(filter === 'all' || filter === 'completed') && completedTodos.map((todo) => (<Todo key={todo.id} todo={todo} onDelete={deleteTodo} onUpdate={updateTodo} />))}
-        </ul>
+    <section className={styles.todoList}>
+      <div className={styles.todoContent}>
+        {(filter === 'all' || filter === 'todo') && 
+          <>
+            <h3 className={styles.todoTitle}>
+              Todo <span className={styles.count}>{uncompletedTodos.length}</span>
+            </h3>
+            <ul className={styles.todoGroup}>
+              {uncompletedTodos.map(todo => <Todo key={todo.id} todo={todo} onDelete={deleteTodo} onUpdate={updateTodo} />)}
+            </ul>
+          </>
+        }
+        {(filter === 'all' || filter === 'completed') && 
+          <>
+            <h3 className={styles.todoTitle}>
+            Completed <span className={styles.count}>{completedTodos.length}</span>
+            </h3>
+            <ul className={styles.todoGroup}>
+              {completedTodos.map(todo => <Todo key={todo.id} todo={todo} onDelete={deleteTodo} onUpdate={updateTodo} />)}
+            </ul>
+          </>
+        }
       </div>
-      <div>
-        <button onClick={deleteAll}><GoTrash /></button>
+      <div className={styles.todoControl}>
+        <button className={styles.btnDeleteAll} onClick={deleteAll}><GoTrash /></button>
         <Add onAdd={addTodo} />
       </div>
     </section>

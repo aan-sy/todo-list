@@ -1,0 +1,67 @@
+.todoList {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: 100%;
+  min-height: 0;
+}
+
+/* LIST GROUP */
+.todoContent {
+  flex: 1 1 auto;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+.todoContent::-webkit-scrollbar {
+  display: none;
+}
+
+/* .todoContent::-webkit-scrollbar {
+  width: 5px;
+}
+
+.todoContent::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,.5);
+  border-radius: 10px;
+}
+
+.todoContent::-webkit-scrollbar-track {
+  background-color: rgba(0,0,0,.3);
+  border-radius: 10px;
+} */
+
+.todoTitle {
+  display: flex;
+  align-items: baseline;
+  gap: .3rem;
+  margin-bottom: 1rem;
+  font-size: var(--font-m);
+  font-weight: bold;
+}
+
+.count {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  font-size: var(--font-s);
+  font-weight: bold;
+  color: var(--color-accent);
+}
+
+.todoGroup {
+  margin-bottom: 2rem;
+}
+
+/* CONTROL */
+.todoControl {
+  display: flex;
+  gap: 1rem;
+  font-size: var(--font-m);
+}
+
+.btnDeleteAll {
+  font-size: var(--font-m);
+}

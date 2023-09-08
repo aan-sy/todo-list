@@ -1,0 +1,23 @@
+.filterGroup {
+  display: flex;
+  gap: .5rem;
+  margin-bottom: 2rem;
+}
+
+.filterMenu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  font-size: var(--font-s);
+  color: var(--color-accent);
+  padding: .3rem 1rem;
+  border: 1px solid var(--color-accent);
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.filterMenu.selected {
+  background-color: var(--color-accent);
+  color: var(--color-accent-contrast);
+}

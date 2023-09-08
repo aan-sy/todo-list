@@ -1,3 +1,4 @@
+import styles from './Add.module.css';
 import React, { useState } from 'react';
 import { BsPlusLg } from 'react-icons/bs';
 import { v4 as uuidv4 } from 'uuid';
@@ -26,11 +27,9 @@ export default function Add({ onAdd }) {
 
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input type="text" value={value} onChange={handleChange} />
-      <button>
-        <BsPlusLg />
-      </button>
+    <form className={styles.form} onSubmit={handleSubmit}>
+      <input className={styles.input} type="text" value={value} onChange={handleChange} />
+      <button className={styles.btnAdd}><BsPlusLg /></button>
     </form>
   );
 }

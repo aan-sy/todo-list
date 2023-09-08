@@ -13,9 +13,11 @@ function App() {
 
   return (
     <DarkModeProvider>
-      <Header />
-      <Nav filters={filters} filter={filter} onChangeFilter={handleFilter} />
-      <TodoList filter={filter} />
+      <section className='planner'>
+        <Header />
+        <Nav filters={filters} filter={filter} onChangeFilter={handleFilter} />
+        <TodoList filter={filter} />
+      </section>
     </DarkModeProvider>
   );
 }
