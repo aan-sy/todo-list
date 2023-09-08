@@ -62,7 +62,7 @@ function calcElapsed(startTime, endTime) {
   hour = (hour === 0) ? `` : `${hour}시간`;
 
   let min = elapsedInMin % 60;
-  min = (min === 0) ? `` : `${min}분`;
+  min = (min === 0) ? `` : ` ${min}분`;
 
   return hour+min;
 }
