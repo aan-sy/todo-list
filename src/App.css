@@ -49,7 +49,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--color-white);
+  background-color: var(--color-accent-contrast);
   width: 100vw;
   height: 100vh;
 }
@@ -68,10 +68,10 @@ button {
 
 @media screen and (max-width: 768px) {
   :root {
-    --font-xs: .9rem;
-    --font-s: 1rem;
-    --font-m: 1.2rem;
-    --font-l: 1.1rem;
+    --font-xs: .8rem;
+    --font-s: .9rem;
+    --font-m: 1.1rem;
+    --font-l: 1.2rem;
   }
 
   .planner {
