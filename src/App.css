@@ -25,6 +25,7 @@ html.darkMode {
   margin: 0;
   box-sizing: border-box;
   font-family: 'Noto Sans KR', sans-serif;
+  letter-spacing: -0.05em;
 }
 
 body {
@@ -66,6 +67,13 @@ button {
 }
 
 @media screen and (max-width: 768px) {
+  :root {
+    --font-xs: .9rem;
+    --font-s: 1rem;
+    --font-m: 1.2rem;
+    --font-l: 1.1rem;
+  }
+
   .planner {
     width: 100vw;
     height: 100vh;
