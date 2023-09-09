@@ -13,6 +13,8 @@ export default function Add({ onAdd }) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    if (value.trim() === '') return;
+
     onAdd({
       id: uuidv4(),
       text: value,
