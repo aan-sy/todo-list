@@ -45,9 +45,21 @@
   transform: scale(1);
 }
 
+.checkbox:checked + label {
+  color: var(--color-subAccent);
+  text-decoration: line-through;
+}
+
 .label {
   flex-grow: 1;
   cursor: pointer;
+}
+
+.label.completed::after {
+  content: '';
+  display: block;
+  position: absolute;
+  text-decoration: line-through;
 }
 
 .btnDelete {

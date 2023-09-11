@@ -13,8 +13,10 @@ export default function Todo({ todo, onDelete, onUpdate }) {
   }
 
   const handleChecked = (e) => {
-    const status = e.target.checked ? 'completed' : 'todo';
-    if (startTime && e.target.checked) {
+    const isChecked = e.target.checked;
+    const status = isChecked ? 'completed' : 'todo';  
+
+    if (startTime && isChecked) {
       const endTime = checkTime();
       const elapsed = calcElapsed(startTime, endTime);
       onUpdate({...todo, status, endTime, elapsed});
@@ -27,7 +29,7 @@ export default function Todo({ todo, onDelete, onUpdate }) {
     <li className={styles.todo}>
       <div className={styles.content}>
         <input className={styles.checkbox} id={id} type="checkbox" checked={status === 'completed'} onChange={handleChecked} />
-        <label className={styles.label} htmlFor={id}>{text}</label>
+        <label className={`${styles.label}`} name={id} htmlFor={id}>{text}</label>
         <button className={styles.btnDelete} onClick={handleDelete}><IoClose /></button>
       </div>
       <div className={styles.time}>
