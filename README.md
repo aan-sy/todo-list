@@ -12,7 +12,7 @@ Dream Coding의 React 강의 중 To do List 프로젝트를 통해 만들게 되
 
 이번 프로젝트를 통해 웹 페이지를 여러 Component로 분리해서 관리하는 연습과
 
-다른 component와 상태 데이터를 공유하기 위해 component tree를 어떻게 구성해야 하는지 고민하는 연습을 해볼 수 있었습니다.
+다른 component와 상태 데이터 공유를 위해 component tree를 어떻게 구성해야 하는지 고민 해보는 연습을 해볼 수 있었습니다.
 
 추후에 목록 별 추가 메모 남기기, 내용 및 시간 수정, 카테고리(공부, 휴식, 운동 등)별로 구분하고 총 시간 나타내기,
 
@@ -24,7 +24,7 @@ Dream Coding의 React 강의 중 To do List 프로젝트를 통해 만들게 되
 - Develop, Build: Create-react-app
 - Package Manager: Yarn
 - version control: GitHub
-- Deployment: Netlify
+- Deploy: Netlify
 
 ### Front-end
 
