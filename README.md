@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+# 1 Day Planner
+visite here: https://unrivaled-otter-abc467.netlify.app/
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 프로젝트 설명
+React 공부를 위해 [Create React App](https://create-react-app.dev/)을 이용해서 만든 [1 Day Planner](https://unrivaled-otter-abc467.netlify.app/) 이며 웹/모바일 브라우저에서 사용 가능합니다.
 
-## Available Scripts
+Dream Coding의 React 강의 중 To do List 프로젝트를 통해 만들게 되었습니다.
 
-In the project directory, you can run:
+강의 내용 외 목록 별로 소요 시간을 나타낼 수 있는 기능을 추가해 Planner로 사용할 수 있도록 해보았습니다.
 
-### `yarn start`
+오늘 날짜가 표시되며 목록 별 시작 시간, 완료 시간, 소요 시간을 나타낼 수 있습니다.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+이번 프로젝트를 통해 웹 페이지를 여러 Component로 분리해서 관리하는 연습과
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+다른 component와 상태 데이터를 공유하기 위해 component tree를 어떻게 구성해야 하는지 고민하는 연습을 해볼 수 있었습니다.
 
-### `yarn test`
+추후에 목록 별 추가 메모 남기기, 내용 및 시간 수정, 카테고리(공부, 휴식, 운동 등)별로 구분하고 총 시간 나타내기,
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+날짜 별로 이전 목록 불러오기 기능을 추가 해보고 싶습니다.
 
-### `yarn build`
+## 개발 환경
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Code Editor: VS Code
+- Develop, Build: Create-react-app
+- Package Manager: Yarn
+- version control: GitHub
+- Deployment: Netlify
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Front-end
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Language: HTML, CSS, JavaScript
+- UI Library: React
+- CSS Tool: Post CSS
 
-### `yarn eject`
+## 플래너 기능
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Header Component
+- 오늘 날짜 표시
+- darkMode, light Mode 지원
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Nav Component
+- 목록 필터링 (모든 목록 보기, 해야 할 목록만 보기, 완료한 목록만 보기)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### TodoList Component
+- 해야할 목록 개수, 완료한 목록 개수 나타내기
+- 휴지통 버튼 클릭 시 체크된 목록 모두 삭제
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+#### Todo Component
+- '시작 시간 저장' 버튼 click 시 시작 시간 나타내기
+- 목록이 check되면 완료된 목록으로 나타내기
+- 시작 시간이 표시된 목록이 check되면 완료 시간, 소요 시간 나타내기
+- x 버튼 클릭 시 해당 목록 삭제
 
-## Learn More
+#### Add Component
+- 할 일 입력 후 enter key 입력 혹은 추가 버튼 click 시 목록 추가하기
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 플래너 GIF
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+pc
 
-### Code Splitting
+<img width="50%" alt="game preview" src="https://github.com/leesoyeonnn/1day-planner/assets/52520202/22d69f5f-f24d-4208-ac14-f89d11aecf20" />
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+mobile
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<img width="50%" alt="game preview" src="https://github.com/leesoyeonnn/1day-planner/assets/52520202/d908fc7b-e498-402b-b4c8-0b0577a4bf75" />
