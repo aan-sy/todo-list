@@ -1,4 +1,27 @@
+:root {
+  --vh: 100%;
+  --color-main: #F2F575;
+  --color-accent: #242526;
+  --color-subAccent: #ABA79B;
+  --color-accent-contrast: #fefffe;
+  --color-white: #fefffe;
+  --gradient-main: linear-gradient(180deg, var(--color-white) 60%, var(--color-main) 80%);
+  --font-xs: .7rem;
+  --font-s: .8rem;
+  --font-m: 1rem;
+  --font-l: 1.1rem;
+}
+
+html.darkMode {
+  --color-main: #5B4E45;
+  --color-accent: #fefffe;
+  --color-subAccent: #A9A59A;
+  --color-accent-contrast: #252422;
+  --gradient-main: linear-gradient(180deg, var(--color-main) 10%, var(--color-accent-contrast) 99%);
+}
+
 html {
+  height: 100vh;
   height: calc(var(--vh, 1vh) * 100);
 }
 
@@ -14,5 +37,14 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    --font-xs: .8rem;
+    --font-s: .9rem;
+    --font-m: 1.1rem;
+    --font-l: 1.2rem;
+  }
 }
 
