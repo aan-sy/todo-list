@@ -1,4 +1,5 @@
 :root {
+  --vh: 100%;
   --color-main: #F2F575;
   --color-accent: #242526;
   --color-subAccent: #ABA79B;
@@ -52,6 +53,7 @@ button {
   background-color: var(--color-accent-contrast);
   width: 100vw;
   height: 100vh;
+  height: var(--vh);
 }
 
 .planner {
