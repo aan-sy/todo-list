@@ -53,7 +53,7 @@ button {
   background-color: var(--color-accent-contrast);
   width: 100vw;
   height: 100vh;
-  height: var(--vh);
+  height: calc(var(--vh, 1vh) * 100);
 }
 
 .planner {
