@@ -20,25 +20,6 @@ html.darkMode {
   --gradient-main: linear-gradient(180deg, var(--color-main) 10%, var(--color-accent-contrast) 99%);
 }
 
-html {
-  height: 100vh;
-  height: calc(var(--vh, 1vh) * 100);
-}
-
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
 @media screen and (max-width: 768px) {
   :root {
     --font-xs: .8rem;

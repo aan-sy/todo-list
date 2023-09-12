@@ -48,7 +48,7 @@ button {
 @media screen and (max-width: 768px) {
   .planner {
     width: 100vw;
-    height: 100vh;
+    height: calc(var(--vh) * 100);
     border: 0;
     border-radius: 0;
   }
