@@ -30,7 +30,7 @@ button {
   justify-content: center;
   background-color: var(--color-accent-contrast);
   width: 100vw;
-  height: 100vh;
+  height: calc(var(--vh) * 100);
 }
 
 .planner {
