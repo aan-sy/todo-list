@@ -1,8 +1,8 @@
 # 1 Day Planner
-visite here: https://unrivaled-otter-abc467.netlify.app/
+visite here: https://1dayplanner.netlify.app/
 
 ## 프로젝트 설명
-React 공부를 위해 [Create React App](https://create-react-app.dev/)을 이용해서 만든 [1 Day Planner](https://unrivaled-otter-abc467.netlify.app/) 이며 웹/모바일 브라우저에서 사용 가능합니다.
+React 공부를 위해 [Create React App](https://create-react-app.dev/)을 이용해서 만든 [1 Day Planner](https://1dayplanner.netlify.app/) 이며 웹/모바일 브라우저에서 사용 가능합니다.
 
 Dream Coding의 React 강의 중 To do List 프로젝트를 통해 만들게 되었습니다.
 
