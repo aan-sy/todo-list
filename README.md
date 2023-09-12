@@ -52,7 +52,7 @@ Dream Coding의 React 강의 중 To do List 프로젝트를 통해 만들게 되
 - x 버튼 클릭 시 해당 목록 삭제
 
 #### Add Component
-- 할 일 입력 후 enter key 입력 혹은 추가 버튼 click 시 목록 추가하기
+- 할 일 입력 후 enter key 입력 혹은 추가 버튼 click 시 목록 추가하기 (목록의 고유한 key는 uuid 이용)
 
 ## 플래너 GIF
 
